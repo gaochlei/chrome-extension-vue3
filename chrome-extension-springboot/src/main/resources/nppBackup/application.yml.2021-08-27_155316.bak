@@ -1,0 +1,29 @@
+logging:
+  level:
+    com:
+      gcl:
+        navigation:
+          mapper: trace
+mybatis:
+  mapper-locations: classpath:/mapper/**/*.xml
+server:
+  port: 8083
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: 123456
+    url: jdbc:mysql://192.168.43.33:3306/navigation?useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowMultiQueries=true
+    username: root
+
+  redis:
+    host: 192.168.43.33
+    port: 6379
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+    timeout: 5000
+
+
